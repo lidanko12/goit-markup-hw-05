@@ -1,2 +1,2 @@
-# goit-markup-hw-05
-дз5
+# goit-markup-hw-02.
+ДЗ 2
