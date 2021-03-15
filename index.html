@@ -58,7 +58,7 @@
 <section class="hero overlay">
     <div class="container">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="modal-btn" type="button">Заказать услугу</button>
+        <button  class="modal-btn" type="button" data-modal-open class>Заказать услугу</button>
     </div>
 </section>
 <!--Features-->
@@ -344,7 +344,12 @@
         </ul>
     </div>
 </section>
-</section>
+<div class="backdrop is-hidden" data-modal>
+    <div class="modal-window">
+        <button class="close-btn"   type="button" data-modal-close>X</button>
+            
+</div>
+
 </main>
 <footer class="footer">
     <div class="container footer-flex">
@@ -399,6 +404,6 @@
     </div>
 </footer>
 
-    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
