@@ -713,12 +713,12 @@ body {
   position: absolute;
   top: 8px;
   right: 8px;
-
+  padding: 6px;
   width: 30px;
   height: 30px;
   background-color: var(--main-color);
 
-  background: #ffffff;
+  background: var(--main-color);
   border: 1px solid rgba(0, 0, 0, 0.1);
   outline: none;
   border-radius: 50%;
