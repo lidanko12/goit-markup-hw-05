@@ -115,36 +115,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--nav-color);
 }
-.social-list {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.social-list-link {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  fill: var(--icon-color);
-  background-color: var(--main-color);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-list-icon {
-  width: 20px;
-  height: 20px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.social-list-link:hover,
-.social-list-link:focus {
-  background-color: var(--second-color);
-}
 
-.social-list-link:hover .social-list-icon,
-.social-list-link:focus .social-list-icon {
-  fill: var(--main-color);
-}
 /*===========END COMPONENT==========*/
 
 /*===========HEADER==========*/
@@ -429,6 +400,36 @@ body {
   color: var(--tel-link-color);
   margin-bottom: 14px;
 }
+.social-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-color);
+  background-color: var(--main-color);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-icon {
+  width: 20px;
+  height: 20px;
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--second-color);
+}
+
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--main-color);
+}
 /*===========END OUR TEAM==========*/
 
 /*===========OUR CLIENT==========*/
@@ -678,8 +679,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: var(--modal-background);
   opacity: 1;
 
@@ -688,6 +689,7 @@ body {
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
+  visibility: hidden;
 }
 
 .backdrop.is-hidden .modal-window {
@@ -695,9 +697,6 @@ body {
 }
 
 .modal-window {
-  display: flex;
-  padding-top: 8px;
-  padding-left: 490px;
   min-width: 528px;
   min-height: 581px;
   background-color: var(--main-color);
@@ -711,11 +710,14 @@ body {
 }
 
 .close-btn {
-  display: block;
-  height: 100%;
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 30px;
+  height: 30px;
   background-color: var(--main-color);
   border: none;
-  margin: 0;
-  padding: 0;
+
   outline: none;
+  cursor: pointer;
 }
